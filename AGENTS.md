@@ -104,6 +104,8 @@ touching Buffer, Gemini or discovery code.
 - Model ids are config (`GEMINI_VIDEO_MODEL` in `.env`), not code.
 - Tests: `uv run pytest -q` (offline; connectors run against faked API responses). Add a test with
   every connector change. Never point pytest at `reference/`.
+- Web edition: edit `web/shared/*` (or `knowledge/` files it bundles), then `python3 web/build.py`;
+  `web/shared/report.py` must stay standard-library only. Tests fail if `web/dist` is stale.
 
 ## Layout
 
@@ -119,6 +121,7 @@ tests/              # offline tests
 accounts/_template/ # account.json, profile.md, learnings.md, discovery/ videos/ reports/
 knowledge/          # frameworks + benchmarks (vendored, attributed)
 docs/               # buffer-setup.md, connect-{youtube,instagram,threads,tiktok,x,linkedin}.md, learnings.md, sources.md
+web/                # web edition for claude.ai / ChatGPT / grok.com: shared/ sources → build.py → dist/ (committed)
 reference/          # gitignored third-party clones (read-only)
 data/               # gitignored: sqlite store, downloaded media, OAuth tokens (data/tokens, 0600)
 ```

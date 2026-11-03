@@ -20,6 +20,9 @@ set of owned accounts:
   TikTok Studio exports (watch time, completion).
 - **Remembers**: per-account `learnings.md` so the next session, on any model, starts where the last stopped.
 
+> **Only use claude.ai, ChatGPT or grok.com in the browser?** Use the **[web edition](web/README.md)** —
+> download one zip, upload it, connect Buffer. No terminal needed (lighter: no daily history or deep connectors).
+
 ## Quick start
 
 Open your agent in this folder and say hi:
